@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+% Make czech characters work
+\usepackage[czech]{babel}
+
+\title{Compulsory Assignment 5}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Odpověď}
+
+Mutace mají Poissonovu distribuci - pro kterou je potřeba mít parametr $\lambda$.
+Ze zadaní víme, že mutační rychlost covidu jsou dvě mutace za měsíc, což je 24 mutací za rok.
+Tedy $\lambda = 24$.
+
+Poissonova distribuce je dána vztahem:
+
+\begin{equation}
+    P(X=k) = \frac{e^{-\lambda} \lambda^k}{k!}
+\end{equation}
+
+kde $k$ je počet mutací co pozorujeme.
+\\
+\\
+Nyní stačí do vzorce dosadit počet let a počet mutací, které chceme pozorovat a získame ony kýžené pravděpodobnosti.
+
+\subsection*{Pravděpodobnost 100 mutací za rok u Covidu}
+
+\begin{equation}
+    P(X=100) = \frac{e^{-24} 24^{100}}{100!} \approx 4.25 \times 10^{-31}
+\end{equation}
+
+\subsection*{Pravděpodobnost jedné mutace za rok u Covidu}
+
+\begin{equation}
+    P(X=1) = \frac{e^{-24} 24^{1}}{1!} \approx 9.06 \times 10^{-10}
+\end{equation}
+
+\subsection*{Ostatní viry}
+
+Pro ostaní viry bychom postupovali obdobně, jen bychom měli jiný parametr $\lambda$ a to pro Influenzu $\lambda = 48$ a pro HIV $\lambda = 96$.
+\\
+\\
+(takže to by bylo $P(X=k) = \frac{e^{-48} 48^k}{k!}$ pro Influenzu a $P(X=k) = \frac{e^{-96} 96^k}{k!}$ pro HIV)
+
+\end{document}

@@ -29,4 +29,6 @@ thesis.run.xml
 *.pdf
 *.DS_Store
 
+venv
+
 

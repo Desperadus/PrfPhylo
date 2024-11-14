@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+% Make czech characters work
+\usepackage[czech]{babel}
+\usepackage{bm}
+
+\title{Brain excercise 5}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Odpověď}
+
+Víme, že po nekonečně dlouhé době mají ty sekvence \textbf{35\% C, 35\% G, 15\% A a 15\% T}.
+\\
+V první sekvecni uvidímě na 35\% pozicích G a to, že v druhé sekvecni k nějakému danému G bude G je tedy opět 35\%, to samé pro C a pro T s A to bude 15\%.
+\\
+\\
+Tedy počet schodných pozic bude $0.35 \cdot 0.35 \cdot 2 + 0.15 \cdot 0.15 \cdot 2 = 0.29$.
+\\
+\\
+No a tím padém bude \boldmath{$p=1-0.29 = 0.71$}.
+\end{document}
