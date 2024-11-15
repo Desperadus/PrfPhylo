@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Make czech characters work
+\usepackage[czech]{babel}
+%add package for python code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=1.18}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    inputencoding=utf8
+}
+
+\title{Compulsory Assignment 6}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Odpověď}
+
+Mějme tedy onu matici vzdáleností:
+\\
+\\
+\begin{tabular}{lrrrr}
+    \toprule
+     & A & B & C & D \\
+    \midrule
+    A & 0.000000 & 0.800000 & 0.900000 & 0.600000 \\
+    B & 0.800000 & 0.000000 & 0.500000 & 0.400000 \\
+    C & 0.900000 & 0.500000 & 0.000000 & 0.500000 \\
+    D & 0.600000 & 0.400000 & 0.500000 & 0.000000 \\
+    \bottomrule
+\end{tabular}
+\\
+\\
+A uvedené evoluční stromy jsem převedl do newick formátu:
+\begin{enumerate}
+    \item (((B:0.2, C:0.3):0.1, D:0.1):0.1, A:0.4);
+    \item (((B:0.2, D:0.2):0.05, C:0.25):0.13, A:0.383);
+\end{enumerate}
+
+Pak jsem si to napsal v pythonu ty vypočty (ručně by to bylo určitě rychlejší, ale tak je to trenink):
+
+Výsledky:
+\begin{enumerate}
+    \item \textbf{Minimum evolution:}
+    \begin{itemize}
+        \item Q1 = 1.2
+        \item Q2 = 1.213
+    \end{itemize}
+    \item \textbf{Least Squares:}
+    \begin{itemize}
+        \item Q1 = 0
+        \item Q2 = 0.046707
+    \end{itemize}
+\end{enumerate}
+
+Jak na základě minimální evoluce, tak na základě metody nejmenších čtverců, je vidět, že preferovaný strom je ten první.
+\\
+\\
+Zde dole máte kód jak jsem to počítal
+
+\subsection*{Python kód}
+
+\lstinputlisting[language=Python, inputencoding=utf8]{answer.py}
+
+\end{document}
