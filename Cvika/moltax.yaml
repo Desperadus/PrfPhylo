@@ -1,0 +1,41 @@
+name: mol-taxo
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - beagle-lib=3.1.2=hb280591_3
+  - bmge=1.12=hdfd78af_1
+  - bzip2=1.0.8=h0d85af4_4
+  - ca-certificates=2021.10.8=h033912b_0
+  - fasttree=2.1.10=hb4d813b_5
+  - iqtree=2.1.4_beta=h4de6764_0
+  - libcxx=12.0.1=habf9029_0
+  - libffi=3.4.2=he49afe7_4
+  - libgfortran=5.0.0=9_3_0_h6c81a4c_23
+  - libgfortran5=9.3.0=h6c81a4c_23
+  - libtool=2.4.6=he49afe7_1008
+  - libzlib=1.2.11=h9173be1_1013
+  - llvm-openmp=12.0.1=hda6cdc1_1
+  - mafft=7.490=hb4d813b_0
+  - mpi=1.0=openmpi
+  - mrbayes=3.2.7=h1a0fc7c_2
+  - ncurses=6.2=h2e338ed_4
+  - openjdk=11.0.9.1=hcf210ce_1
+  - openmpi=4.1.1=hd3cd54c_0
+  - openssl=3.0.0=h0d85af4_2
+  - phylip=3.697=h1de35cc_1
+  - pip=21.3.1=pyhd8ed1ab_0
+  - python=3.10.0=h38b4d05_2_cpython
+  - python_abi=3.10=2_cp310
+  - raxml=8.2.12=hb4d813b_3
+  - readline=8.1=h05e3726_0
+  - sqlite=3.36.0=h23a322b_2
+  - tk=8.6.11=h5dbffcc_1
+  - trimal=1.4.1=hb280591_5
+  - tzdata=2021e=he74cb21_0
+  - wheel=0.37.0=pyhd8ed1ab_1
+  - xz=5.2.5=haf1e3a3_1
+  - zlib=1.2.11=h9173be1_1013
+  - pip:
+    - setuptools==58.4.0
