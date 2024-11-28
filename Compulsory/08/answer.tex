@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Make czech characters work
+\usepackage[czech]{babel}
+%add package for python code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=1.18}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    inputencoding=utf8
+}
+
+\title{Compulsory Assignment 8}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{Odpověď}
+
+% Calculate the probability for a patient being negative given the negative COVID antigen test. Assume 1\% prevalence of the disease in the population, sensitivity of the test 80\% and specificity of the test 99,2\%. 
+
+\[
+\begin{aligned}
+&\text{Ze zadání máme:} \\
+&P(D) = 0.01 \quad \text{(Prevalence)} \\
+&P(\neg D) = 0.99 \\
+&P(\text{Test}^+ \mid D) = 0.80 \quad \text{(Sensitivity)} \\
+&P(\text{Test}^- \mid \neg D) = 0.992 \quad \text{(Specificity)} \\
+\\
+&\text{Chceme najít } P(\neg D \mid \text{Test}^-). \\
+\\
+&\text{Z bayesovy věty máme:}
+\\
+&P(\neg D \mid \text{Test}^-) = \frac{P(\text{Test}^- \mid \neg D) \cdot P(\neg D)}{P(\text{Test}^-)} \\
+&\text{kde } P(\text{Test}^-) = P(\text{Test}^- \mid \neg D) \cdot P(\neg D) + P(\text{Test}^- \mid D) \cdot P(D) \\
+&= 0.992 \times 0.99 + (1 - 0.80) \times 0.01 \\
+&= 0.98208 + 0.002 \\
+&= 0.98408 \\
+\\
+&\text{Takže:}
+\\
+&P(\neg D \mid \text{Test}^-) = \frac{P(\text{Test}^- \mid \neg D) \cdot P(\neg D)}{P(\text{Test}^-)} = \frac{0.992 \times 0.99}{0.98408} \\
+&= \frac{0.98208}{0.98408} \approx 0.99797... \\
+&\approx 99.8\%
+\end{aligned}
+\]
+
+
+\end{document}

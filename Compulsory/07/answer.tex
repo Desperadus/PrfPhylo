@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Make czech characters work
+\usepackage[czech]{babel}
+%add package for python code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=1.18}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    inputencoding=utf8
+}
+
+\title{Compulsory Assignment 6}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{Odpověď}
+
+Vlastně jsem jen do vzorce z prezentace dosadil ty naše čísla z úkolu:
+\[
+\begin{aligned}
+&\text{P}_o(t) = \frac{3}{10} \left( \frac{1}{4} + \frac{3}{4} e^{-0t} \right) + \frac{7}{10} \left( \frac{1}{4} + \frac{3}{4} e^{-\frac{10t}{7}} \right) \\
+&\text{P}_o(t) = \frac{3}{10} + \frac{7}{10} \left( \frac{1}{4} + \frac{3}{4} e^{-\frac{10t}{7}} \right) = \frac{21}{40} e^{-(10t)/7} + \frac{19}{40}
+\end{aligned}
+\]
+
+Ve finále, že zůstane nezměněný budou ty 3/10 (šance, že se nachází v invariantní části) + to, že se budou stejný v měnicí se části - klasicky dle Jukes Cantorova modelu * 7/10 (šance, že je v tý měnící se části).
+
+\end{document}
