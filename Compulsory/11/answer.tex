@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Make czech characters work
+\usepackage[czech]{babel}
+%add package for python code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=1.18}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    inputencoding=utf8
+}
+
+\title{Compulsory Assignment + Brain excercise 11}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{Odpověď - Compulsory}
+
+Pouze otec číslo 2 je potencílním rodičem, ostatní lze vyloučit, protože dítě má alely, co oni ne a nejsou od matky.
+
+\section*{Odpověď - Brain excercise}
+
+Vidíme jaké alely jsou od matky a jaké od otce (ta co prostě není od matky). A lze zkonstruovat tabulku frekvencí pro dané alely z toho webu:
+
+\begin{table}[h!]
+    \centering
+    \caption{Frekvence alel od otce pro Česko and Evropu}
+    \label{tab:allele_frequencies}
+    \begin{tabular}{|l|c|c|}
+    \hline
+    \textbf{Alela}        & \textbf{Česko}   & \textbf{Evropa}  \\ \hline
+    D1S1656 - 12          & \( 1.6500 \times 10^{-1} \) & \( 1.2778 \times 10^{-1} \) \\ \hline
+    D2S1338 - 19          & \( 1.0750 \times 10^{-1} \) & \( 1.0874 \times 10^{-1} \) \\ \hline
+    D2S441 - 9            & \( 2.5000 \times 10^{-3} \) & \( 1.3194 \times 10^{-3} \) \\ \hline
+    D3S1358 - 19          & \( 7.5000 \times 10^{-3} \) & \( 1.2017 \times 10^{-2} \) \\ \hline
+    D8S1179 - 16          & \( 2.0000 \times 10^{-2} \) & \( 2.5490 \times 10^{-2} \) \\ \hline
+    \textbf{Produkt}      & \( 6.6515625 \times 10^{-9} \) & \( 5.61558 \times 10^{-9} \) \\ \hline
+    \end{tabular}
+\end{table}
+
+V tabulce vidíme ony frekvence lidí s danými alelami - tedy potenciálními otci děleno dvěmi.
+\\
+\\
+\subsection*{Počty lidí v Česku a Evropě} 
+
+\subsubsection*{Česko}
+Počet čechů jenž jsou potenciálními otci bude tedy: 
+
+\[
+10800000/2 \times 6.6515625 \times 10^{-9} = 0.036...
+\]
+(Počítám že v česku je cca 10.8 milionu lidí a polovina jsou muži)
+
+\subsubsection*{Evropa}
+Počet evropanů jenž jsou potenciálními otci bude tedy:
+
+\[
+741000000/2 \times 5.61558 \times 10^{-9} = 2.08...
+\]
+(Počítám že v evropě je cca 741 milionů lidí a polovina jsou muži)
+
+\end{document}

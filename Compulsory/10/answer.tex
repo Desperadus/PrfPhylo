@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+% Make czech characters work
+\usepackage[czech]{babel}
+%add package for python code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{filecontents}
+
+\pgfplotsset{compat=1.18}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    breaklines=true,
+    frame=single,
+    inputencoding=utf8
+}
+
+\title{Compulsory Assignment 10}
+\author{Tomáš Jelínek}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{Odpověď}
+
+Zde je vyjádření časů:
+
+\begin{align*}
+    v_1 &= v_2 \\
+    v_4 &= v_5 \\
+    v_1 + v_3 &= v_4 + v_6 \\
+    \hline
+    v_7 &= v_8 \\
+    v_{10} + v_7 &= v_9 \\
+    v_9 + v_{11} &= v_{12} + v_3 + v_1 \\
+    \end{align*}
+
+z toho prohlásím že: $v_1, v_3, v_4, v_7, v_{10}, v_{12}$ jsou nezávislé, tedy budu mít 6 stupňů volnosti.
+
+Na základě mého kódu vycházi p-value $0.066582206320095829$ což je více než $0.05$ a tedy nezamítáme nulovou hypotézu.
+
+\subsection*{Kód}
+% show code
+\lstinputlisting{lrt.py}
+
+\end{document}
