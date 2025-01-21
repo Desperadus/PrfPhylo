@@ -30,5 +30,7 @@ thesis.run.xml
 *.DS_Store
 
 venv
+txt_dl.py
+moltax2023_combined.pdf
 
 
